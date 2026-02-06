@@ -1,15 +1,16 @@
-import { ReactNode } from "react";
+import React from "react";
 
 interface SectionProps {
-    title: string;
-    children: ReactNode;
     id?: string;
+    title?: string;
+    children: React.ReactNode;
+    className?: string;
 }
 
-export default function Section({ title, children, id }: SectionProps) {
+export default function Section({ id, title, children, className = "" }: SectionProps) {
     return (
-        <section id={id}>
-            <h3>{title}</h3>
+        <section id={id} className={className}>
+            {title && <h3>{title}</h3>}
             {children}
         </section>
     );

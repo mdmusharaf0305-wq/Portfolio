@@ -1,14 +1,25 @@
+/* ===================================================== */
+/* 🌐 ROOT VARIABLES */
+/* ===================================================== */
+
 :root {
-  /* Elite neutral palette */
-  --bg-main: #f8fafc;
-  --bg-subtle: #eef2f7;
+  --bg-main: #f0faff;
+  --bg-subtle: #e2f0ff;
 
-  --text-primary: #0f172a;
-  --text-secondary: #475569;
+  --text-primary: #102a43;
+  --text-secondary: #334e68;
 
-  --border-light: rgba(15, 23, 42, 0.08);
-  --accent: #2563eb;
+  --border-light: rgba(16, 42, 67, 0.08);
+
+  --accent: #0284c7;       
+  --accent-hover: #0369a1;
+  --accent-light: rgba(37, 99, 235, 0.12);
+  --accent-strong: #0c4a6e;
 }
+
+/* ===================================================== */
+/* 🔧 GLOBAL BASE */
+/* ===================================================== */
 
 * {
   box-sizing: border-box;
@@ -16,163 +27,115 @@
 
 html {
   scroll-behavior: smooth;
+
+  font-feature-settings: "liga", "calt";
+  font-optical-sizing: auto;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
 }
 
 body {
   margin: 0;
   font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, sans-serif;
+
   background: linear-gradient(180deg,
       var(--bg-main) 0%,
       var(--bg-subtle) 100%);
+
   color: var(--text-primary);
   line-height: 1.7;
+
+  font-size: clamp(15px, 1.05vw, 16.5px);
+  letter-spacing: -0.005em;
 }
 
 .container {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 3.5rem 1.25rem;
+  padding: 2.5rem 1.5rem;
 }
 
-/* Typography */
+/* ===================================================== */
+/* ✍️ TYPOGRAPHY */
+/* ===================================================== */
+
 h1 {
   font-size: clamp(2.6rem, 6vw, 3rem);
   font-weight: 600;
-  letter-spacing: -0.02em;
+  letter-spacing: -0.025em;
 }
 
 h2 {
   font-size: 1.25rem;
-  color: var(--text-secondary);
   margin-top: 0.75rem;
+  color: var(--text-secondary);
+  letter-spacing: -0.015em;
 }
 
 h3 {
   font-size: 1.6rem;
   margin-bottom: 1.25rem;
+  letter-spacing: -0.015em;
 }
 
 h4 {
   font-size: 1.1rem;
   margin-bottom: 0.5rem;
+  letter-spacing: -0.01em;
 }
 
 p {
   max-width: 720px;
-  color: var(--text-secondary);
   margin-top: 0.75rem;
-}
-
-/* ---------- TRANSPARENT GRADIENT CARD ---------- */
-.section-card {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.65),
-      rgba(255, 255, 255, 0.35));
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-
-  border: 1px solid var(--border-light);
-  border-radius: 18px;
-  padding: 2.75rem;
-
-  box-shadow:
-    0 1px 2px rgba(15, 23, 42, 0.04),
-    0 12px 32px rgba(15, 23, 42, 0.08);
-
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
-}
-
-.section-card:hover {
-  transform: translateY(-6px);
-  box-shadow:
-    0 22px 55px rgba(15, 23, 42, 0.14);
-}
-
-/* Lists */
-ul {
-  margin-top: 1rem;
-  padding-left: 1.25rem;
-}
-
-li {
-  margin-bottom: 0.6rem;
-}
-
-/* ---------- FOOTER BASE ---------- */
-footer {
-  margin-top: 6rem;
-  padding: 4rem 1.25rem 2.5rem;
-  background: linear-gradient(180deg,
-      rgba(248, 250, 252, 0.6),
-      rgba(241, 245, 249, 0.9));
-  border-top: 1px solid rgba(15, 23, 42, 0.08);
-}
-
-/* ---------- EXPERIENCE TIMELINE ---------- */
-
-.timeline {
-  position: relative;
-  padding-left: 2.5rem;
-}
-
-.timeline::before {
-  content: "";
-  position: absolute;
-  left: 8px;
-  top: 0;
-  bottom: 0;
-  width: 2px;
-  background: linear-gradient(180deg,
-      rgba(37, 99, 235, 0.6),
-      rgba(37, 99, 235, 0.1));
-}
-
-.experience-card {
-  position: relative;
-  margin-bottom: 3rem;
-}
-
-.timeline-dot {
-  position: absolute;
-  left: -2.65rem;
-  top: 1.25rem;
-  width: 14px;
-  height: 14px;
-  border-radius: 50%;
-  background: linear-gradient(135deg,
-      #2563eb,
-      #60a5fa);
-  box-shadow: 0 0 0 6px rgba(37, 99, 235, 0.15);
-}
-
-.card-content {
-  background: linear-gradient(135deg,
-      rgba(255, 255, 255, 0.65),
-      rgba(255, 255, 255, 0.35));
-  backdrop-filter: blur(14px);
-  border: 1px solid rgba(15, 23, 42, 0.08);
-  border-radius: 18px;
-  padding: 2.5rem;
-}
-
-.card-content h4 {
-  margin-bottom: 0.25rem;
-}
-
-.card-content .company {
-  font-size: 0.95rem;
   color: var(--text-secondary);
-  margin-bottom: 1rem;
 }
 
-.card-content ul {
-  padding-left: 1.2rem;
+p,
+li {
+  letter-spacing: 0;
 }
 
-.card-content li {
-  margin-bottom: 0.6rem;
+/* ===================================================== */
+/* 📱 MOBILE TYPOGRAPHY — FINAL */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  body {
+    font-size: 14.5px;
+  }
+
+  p,
+  li {
+    font-size: 0.94rem;
+    line-height: 1.55;
+    letter-spacing: 0.01em;
+  }
+
+  h3 {
+    font-size: 1.32rem;
+    letter-spacing: -0.01em;
+  }
+
+  h4 {
+    font-size: 0.98rem;
+  }
+}
+
+/* ===================================================== */
+/* 🖥 DESKTOP / LARGE SCREENS */
+/* ===================================================== */
+
+@media (min-width: 1024px) {
+
+  body {
+    font-size: 16.5px;
+  }
+
+  p,
+  li {
+    line-height: 1.7;
+  }
 }
 
 /* ======================================= */
@@ -207,7 +170,7 @@ footer {
 }
 
 /* ======================================= */
-/* DESKTOP LINKS — TEXT BY DEFAULT, PILL ON INTERACTION */
+/* DESKTOP LINKS — TEXT → PILL ON INTERACTION */
 /* ======================================= */
 
 .nav-links {
@@ -215,20 +178,16 @@ footer {
   gap: 0.75rem;
 }
 
-/* Default: bold text only */
 .nav-links a {
   font-size: 0.95rem;
   font-weight: 600;
-  /* 🔥 bold */
   color: var(--text-primary);
   text-decoration: none;
 
   padding: 0.35rem 0.6rem;
-  /* minimal hit area */
   border-radius: 999px;
 
   background: transparent;
-  /* 🔑 no pill by default */
   border: none;
   box-shadow: none;
 
@@ -239,14 +198,12 @@ footer {
     transform 0.15s ease;
 }
 
-/* Hover → pill appears */
 .nav-links a:hover {
   background: rgba(37, 99, 235, 0.08);
   color: var(--accent);
   transform: translateY(-1px);
 }
 
-/* Active / keyboard focus → stronger pill */
 .nav-links a:active,
 .nav-links a:focus-visible {
   background: rgba(37, 99, 235, 0.14);
@@ -254,25 +211,25 @@ footer {
   box-shadow: inset 0 0 0 1px rgba(37, 99, 235, 0.35);
 }
 
-/* Resume behaves like normal link (NO pre-select) */
+/* Resume behaves like normal link */
 .nav-links .resume-link {
   background: transparent;
   border: none;
   color: var(--text-primary);
 }
 
-/* Remove underline animation completely */
+/* Remove underline animation */
 .nav-links a::after {
   display: none;
 }
 
-
 /* ======================================= */
-/* HAMBURGER — ANIMATED */
+/* HAMBURGER — BASE + ANIMATION */
 /* ======================================= */
 
 .hamburger {
   display: none;
+  /* desktop-first */
   width: 28px;
   height: 22px;
   position: relative;
@@ -315,7 +272,7 @@ footer {
 }
 
 /* ======================================= */
-/* MOBILE MENU — MATCH PILL STYLE */
+/* MOBILE MENU */
 /* ======================================= */
 
 .mobile-menu {
@@ -342,7 +299,7 @@ footer {
 }
 
 /* ======================================= */
-/* RESPONSIVE RULES */
+/* 📱 MOBILE VISIBILITY RULES */
 /* ======================================= */
 
 @media (max-width: 768px) {
@@ -355,6 +312,335 @@ footer {
   }
 }
 
+
+/* ============================= */
+/* SECTION CARD (SINGLE SOURCE) */
+/* ============================= */
+
+.section-card {
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.35));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+  padding: 2rem;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 12px 32px rgba(15, 23, 42, 0.08);
+
+  transition: transform 0.45s ease, box-shadow 0.45s ease;
+}
+
+.section-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 22px 55px rgba(15, 23, 42, 0.14);
+}
+
+/* ============================= */
+/* LISTS */
+/* ============================= */
+
+ul {
+  margin-top: 1rem;
+  padding-left: 1.25rem;
+}
+
+li {
+  margin-bottom: 0.6rem;
+}
+
+/* ===================================================== */
+/* 🧠 SKILLS — MODERN FLIP CARDS (PRODUCTION READY) */
+/* ===================================================== */
+
+.skills-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 1rem;
+  margin-top: 1 rem;
+}
+
+/* Card wrapper */
+.flip-card {
+  height: 130px;
+  /* FIXED HEIGHT — NO OVERFLOW */
+  perspective: 1200px;
+}
+
+/* 3D container */
+.flip-card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.55s cubic-bezier(.4, .2, .2, 1);
+}
+
+/* Flip interaction */
+.flip-card:hover .flip-card-inner {
+  transform: rotateY(180deg);
+}
+
+/* Faces */
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+  border: 1px solid var(--border-light);
+  background: rgba(255, 255, 255, 0.75);
+
+  backface-visibility: hidden;
+  -webkit-backface-visibility: hidden;
+}
+
+/* ================= FRONT ================= */
+
+.flip-card-front {
+  flex-direction: column;
+  gap: 0.45rem;
+  text-align: center;
+  font-weight: 600;
+}
+
+.skill-icon {
+  font-size: 1.6rem;
+  line-height: 1;
+}
+
+.skill-title {
+  font-size: 0.9rem;
+  color: var(--text-primary);
+}
+
+/* ================= BACK ================= */
+
+.flip-card-back {
+  transform: rotateY(180deg);
+  padding: 0.7rem;
+}
+
+/* Pills layout */
+.skill-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.35rem;
+  justify-content: center;
+}
+
+/* Individual pill */
+.skill-pill {
+  font-size: 0.7rem;
+  padding: 0.28rem 0.55rem;
+  border-radius: 999px;
+  font-weight: 500;
+  white-space: nowrap;
+
+  background: linear-gradient(135deg,
+      rgba(37, 99, 235, 0.12),
+      rgba(37, 99, 235, 0.06));
+  color: #1e40af;
+
+  border: 1px solid rgba(37, 99, 235, 0.25);
+}
+
+/* ================= MOBILE (ANDROID SAFE — FINAL) ================= */
+
+@media (max-width: 768px) {
+
+  /* ================= GRID ================= */
+
+  .skills-section {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+  }
+
+  /* ================= BASE CARD ================= */
+
+  .flip-card {
+    height: 145px;
+    /* normal cards */
+  }
+
+  .flip-card-back {
+    padding: 0.85rem;
+  }
+
+  /* ================= DENSE CARD VARIANT ================= */
+
+  .flip-card--dense {
+    height: 175px;
+    /* 🔑 more room for heavy content */
+  }
+
+  .flip-card--dense .flip-card-back {
+    padding: 0.8rem;
+  }
+
+  /* ================= PILLS ================= */
+
+  .skill-pills {
+    gap: 0.4rem;
+    align-content: flex-start;
+    justify-content: center;
+  }
+
+  /* Normal pills */
+  .skill-pill {
+    font-size: 0.72rem;
+    line-height: 1.25;
+    padding: 0.3rem 0.55rem;
+  }
+
+  /* Dense pills — slightly tighter */
+  .flip-card--dense .skill-pill {
+    font-size: 0.68rem;
+    line-height: 1.2;
+    padding: 0.26rem 0.5rem;
+  }
+
+  /* ================= FRONT FACE ================= */
+
+  .skill-title {
+    font-size: 0.88rem;
+  }
+
+  .skill-icon {
+    font-size: 1.45rem;
+  }
+}
+
+
+/* ===================================================== */
+/* 🧠 EXPERIENCE SECTION — DEVICE-SAFE */
+/* Unified + deduplicated */
+/* ===================================================== */
+
+/* Experience container */
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+  margin-top: 1.5rem;
+}
+
+/* Experience card — matches project card system */
+.experience-card {
+  position: relative;
+  margin: 0;
+
+  background: linear-gradient(135deg,
+      rgba(255, 255, 255, 0.65),
+      rgba(255, 255, 255, 0.35));
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+
+  border: 1px solid var(--border-light);
+  border-radius: 18px;
+
+  box-shadow:
+    0 1px 2px rgba(15, 23, 42, 0.04),
+    0 12px 32px rgba(15, 23, 42, 0.08);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+/* Hover — identical to project cards */
+.experience-card:hover {
+  transform: translateY(-6px);
+  box-shadow:
+    0 22px 55px rgba(15, 23, 42, 0.14);
+}
+
+/* Inner content */
+.experience-card .card-content {
+  padding: 2rem;
+}
+
+/* Header row */
+.experience-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+/* Role + duration */
+.experience-role {
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  margin: 0;
+}
+
+.experience-duration {
+  font-size: 0.85rem;
+  color: var(--text-secondary);
+  white-space: nowrap;
+}
+
+/* Company line */
+.experience-card .company {
+  margin-top: 0.35rem;
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+  color: var(--text-secondary);
+}
+
+/* Bullet points */
+.experience-points {
+  margin-top: 0.85rem;
+  padding-left: 1.1rem;
+}
+
+.experience-points li {
+  margin-bottom: 0.5rem;
+}
+
+/* ===================================================== */
+/* 📱 MOBILE — FINAL CONSOLIDATED TUNING */
+/* ===================================================== */
+
+@media (max-width: 768px) {
+
+  .experience-section {
+    gap: 1.4rem;
+  }
+
+  .experience-card .card-content {
+    padding: 1.4rem;
+  }
+
+  .experience-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.2rem;
+  }
+
+  .experience-role {
+    font-size: 1.05rem;
+  }
+
+  .experience-duration {
+    font-size: 0.8rem;
+  }
+
+  .experience-points li {
+    line-height: 1.5;
+  }
+}
 
 /* ======================================= */
 /* V3.5 — PROJECT ARCHITECTURE (FINAL) */
@@ -396,7 +682,6 @@ footer {
 .architecture-image img {
   width: 100%;
   max-width: 340px;
-  /* 🔑 ensures it ALWAYS fits inside card */
   height: auto;
   border-radius: 14px;
   border: 1px solid rgba(15, 23, 42, 0.08);
@@ -417,31 +702,6 @@ footer {
 @media (max-width: 768px) {
   .architecture-image {
     order: -1;
-  }
-
-  .architecture-image img {
-    max-width: 100%;
-  }
-}
-
-/* ======================================= */
-/* NAVBAR — HAMBURGER VISIBILITY FIX */
-/* ======================================= */
-
-/* Hide hamburger by default (desktop-first) */
-.hamburger {
-  display: none;
-}
-
-/* Show hamburger only on small screens */
-@media (max-width: 768px) {
-  .hamburger {
-    display: block;
-  }
-
-  /* Hide desktop links on mobile */
-  .nav-links {
-    display: none;
   }
 }
 
@@ -467,11 +727,10 @@ footer {
   padding: 0.45rem 0.85rem;
   border-radius: 999px;
   font-size: 0.85rem;
-  font-weight: 500;
+  font-weight: 800;
   color: var(--text-secondary);
   cursor: pointer;
   white-space: nowrap;
-  font-weight: 800;
 
   transition:
     background-color 0.25s ease,
@@ -480,13 +739,13 @@ footer {
     transform 0.15s ease;
 }
 
-/* Hover (non-active) */
+/* Hover */
 .project-actions button:hover {
   background: rgba(37, 99, 235, 0.08);
   color: var(--text-primary);
 }
 
-/* Active state */
+/* Active */
 .project-actions button.active {
   background: linear-gradient(135deg,
       rgba(37, 99, 235, 0.15),
@@ -497,15 +756,126 @@ footer {
     inset 0 0 0 1px rgba(37, 99, 235, 0.35);
 }
 
-/* Subtle press feedback */
+/* Press feedback */
 .project-actions button:active {
   transform: scale(0.96);
 }
 
-/* Mobile friendliness */
+/* ===================================================== */
+/* 📱 ANDROID FIX — REMOVE HORIZONTAL LEAKS COMPLETELY */
+/* ===================================================== */
+
 @media (max-width: 768px) {
-  .project-actions {
-    flex-wrap: wrap;
-    border-radius: 14px;
+
+  /* 1️⃣ Force vertical layout no matter what */
+  .project-architecture {
+    display: flex !important;
+    flex-direction: column !important;
+    gap: 1.1rem;
+    width: 100%;
+    max-width: 100%;
   }
+
+  /* 2️⃣ Prevent children from forcing width */
+  .project-architecture>* {
+    min-width: 0 !important;
+    max-width: 100% !important;
+  }
+
+  /* 3️⃣ Architecture text must wrap, not expand */
+  .architecture-text {
+    width: 100%;
+    max-width: 100%;
+    overflow-wrap: break-word;
+    word-break: normal;
+  }
+
+  /* 4️⃣ Images stay centered and contained */
+  .architecture-image {
+    width: 100%;
+    max-width: 100%;
+    justify-content: center;
+  }
+
+  .architecture-image img {
+    max-width: 300px;
+  }
+
+  /* 5️⃣ Tabs / actions must never push width */
+  .project-actions {
+    max-width: 100%;
+    overflow-x: auto;
+  }
+}
+
+
+
+/* ===================================================== */
+/* FOOTER LINKS — ICON MODE (FINAL) */
+/* ===================================================== */
+
+.footer-icons {
+  gap: 1.25rem;
+}
+
+.footer-icons a {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.5rem;
+  justify-content: center;
+  border-radius: 10px;
+}
+
+/* ---------- DEFAULT ICON STATE (ALL GREY) ---------- */
+.footer-icons img {
+  width: 22px;
+  height: 22px;
+
+  opacity: 0.7;
+  filter: grayscale(1) brightness(0.55);
+
+  transition:
+    filter 0.25s ease,
+    opacity 0.25s ease,
+    transform 0.25s ease;
+}
+
+/* Lift on hover */
+.footer-icons a:hover img {
+  opacity: 1;
+  transform: translateY(-2px);
+}
+
+/* ---------- BRAND COLORS ON HOVER ---------- */
+
+/* Gmail — red */
+.footer-icons a:hover .icon-gmail {
+  filter: invert(33%) sepia(93%) saturate(746%) hue-rotate(345deg) brightness(1.05);
+}
+
+/* LinkedIn — blue */
+.footer-icons a:hover .icon-linkedin {
+  filter: invert(33%) sepia(93%) saturate(746%) hue-rotate(182deg) brightness(1.05);
+}
+
+/* GitHub — original black */
+.footer-icons a:hover .icon-github {
+  filter: none;
+}
+
+/* ---------- NAUKRI (SPECIAL CASE) ---------- */
+
+/* Grey by default */
+.footer-icons .naukri-icon {
+  width: auto;
+  height: 24px;
+
+  filter: grayscale(1) brightness(0.55);
+  opacity: 0.7;
+}
+
+/* Restore original blue on hover */
+.footer-icons a:hover .naukri-icon {
+  filter: none;
+  opacity: 1;
 }
