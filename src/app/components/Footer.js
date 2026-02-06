@@ -6,34 +6,28 @@ export default function Footer() {
                 style={{
                     display: "flex",
                     justifyContent: "space-between",
+                    alignItems: "flex-start",
                     gap: "3rem",
                     flexWrap: "wrap",
                 }}
             >
-                {/* LEFT SIDE — Content */}
-                <div style={{ maxWidth: "650px" }}>
-                    <h3 style={{ marginBottom: "0.75rem" }}>
-                        Mohammed — Backend-Focused Full-Stack & Data Engineer
-                    </h3>
-
-                    <p style={{ marginBottom: "1rem" }}>
-                        Backend-focused engineer with ~2 years of experience building
-                        cloud-native APIs, serverless systems, and data pipelines. I enjoy
-                        designing reliable architectures and owning problems end-to-end,
-                        from requirements to production.
+                {/* LEFT — MESSAGE */}
+                <div style={{ maxWidth: "520px" }}>
+                    <p style={{ fontSize: "1.05rem", marginBottom: "0.75rem" }}>
+                        Want to collaborate or discuss an opportunity?
                     </p>
 
-                    <p style={{ marginBottom: "1.25rem", opacity: 0.85 }}>
-                        If you’re building something meaningful or want to discuss an
-                        engineering opportunity, feel free to reach out.
+                    <p style={{ opacity: 0.85, marginBottom: "1.5rem" }}>
+                        I’m always open to meaningful engineering conversations, backend
+                        challenges, and product-focused problem solving.
                     </p>
 
                     <p style={{ fontSize: "0.85rem", opacity: 0.6 }}>
-                        © {new Date().getFullYear()} Mohammed Musharraf. Built with Next.js.
+                        © {new Date().getFullYear()} Mohammed Musharraf
                     </p>
                 </div>
 
-                {/* RIGHT SIDE — Social Icons */}
+                {/* RIGHT — CONTACT ICONS */}
                 <div
                     style={{
                         display: "flex",
