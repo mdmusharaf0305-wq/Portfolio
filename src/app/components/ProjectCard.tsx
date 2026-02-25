@@ -3,8 +3,27 @@
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
+interface Company {
+    name: string;
+    logo?: string;
+}
+
+interface ProjectCardProps {
+    company?: Company;
+    title: string;
+    description?: string[];
+    focus?: string;
+    tech?: string;
+    note?: string;
+    architecture?: string[];
+    architectureImage?: string;
+    decisions?: string[];
+    tradeoffs?: string[];
+    liveUrl?: string;
+}
+
 export default function ProjectCard({
-    company, // ✅ added
+    company,
     title,
     description = [],
     focus,
@@ -15,14 +34,14 @@ export default function ProjectCard({
     decisions,
     tradeoffs,
     liveUrl,
-}) {
-    const [activePanel, setActivePanel] = useState(null);
-    const cardRef = useRef(null);
+}: ProjectCardProps) {
+    const [activePanel, setActivePanel] = useState<string | null>(null);
+    const cardRef = useRef<HTMLDivElement>(null);
 
     /* ---------- AUTO-CLOSE: when another project opens ---------- */
     useEffect(() => {
-        const handleGlobalClose = (e) => {
-            if (e.detail !== cardRef.current) {
+        const handleGlobalClose = (e: Event) => {
+            if ((e as CustomEvent).detail !== cardRef.current) {
                 setActivePanel(null);
             }
         };
@@ -49,7 +68,7 @@ export default function ProjectCard({
         return () => observer.disconnect();
     }, []);
 
-    const togglePanel = (panel) => {
+    const togglePanel = (panel: string) => {
         const next = activePanel === panel ? null : panel;
         setActivePanel(next);
 
@@ -162,7 +181,7 @@ export default function ProjectCard({
                     >
                         <div className="project-architecture">
                             <div className="architecture-text">
-                                {architecture.map((item, idx) => (
+                                {architecture!.map((item, idx) => (
                                     <p key={idx}>• {item}</p>
                                 ))}
                             </div>
@@ -188,7 +207,7 @@ export default function ProjectCard({
                         transition={{ duration: 0.35 }}
                     >
                         <div className="project-panel">
-                            {decisions.map((item, idx) => (
+                            {decisions!.map((item, idx) => (
                                 <p key={idx}>• {item}</p>
                             ))}
                         </div>
@@ -204,7 +223,7 @@ export default function ProjectCard({
                         transition={{ duration: 0.35 }}
                     >
                         <div className="project-panel">
-                            {tradeoffs.map((item, idx) => (
+                            {tradeoffs!.map((item, idx) => (
                                 <p key={idx}>• {item}</p>
                             ))}
                         </div>
