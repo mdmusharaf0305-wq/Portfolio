@@ -4,8 +4,9 @@ import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 export default function ProjectCard({
+    company, // ✅ added
     title,
-    description,
+    description = [],
     focus,
     tech,
     note,
@@ -13,6 +14,7 @@ export default function ProjectCard({
     architectureImage,
     decisions,
     tradeoffs,
+    liveUrl,
 }) {
     const [activePanel, setActivePanel] = useState(null);
     const cardRef = useRef(null);
@@ -26,9 +28,8 @@ export default function ProjectCard({
         };
 
         window.addEventListener("close-all-project-panels", handleGlobalClose);
-        return () => {
+        return () =>
             window.removeEventListener("close-all-project-panels", handleGlobalClose);
-        };
     }, []);
 
     /* ---------- AUTO-CLOSE: when scrolling away ---------- */
@@ -52,7 +53,6 @@ export default function ProjectCard({
         const next = activePanel === panel ? null : panel;
         setActivePanel(next);
 
-        /* Notify other project cards */
         window.dispatchEvent(
             new CustomEvent("close-all-project-panels", {
                 detail: cardRef.current,
@@ -68,21 +68,58 @@ export default function ProjectCard({
             transition={{ type: "spring", stiffness: 180, damping: 20 }}
             style={{ marginBottom: "2rem" }}
         >
-            <h4>{title}</h4>
+            {/* ---------- COMPANY (Logo + Name) ---------- */}
+            {company && (
+                <div className="project-company">
+                    {company.logo && (
+                        <img
+                            src={company.logo}
+                            alt={company.name}
+                            className="project-company-logo"
+                        />
+                    )}
+                    <span className="project-company-name">
+                        {company.name}
+                    </span>
+                </div>
+            )}
 
+            {/* ---------- TITLE + LIVE LINK ---------- */}
+            <div className="project-title">
+                <h4 className="project-heading">
+                    {title}
+                    {liveUrl && (
+                        <a
+                            href={liveUrl}
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="project-live-link"
+                            aria-label={`View ${title} live`}
+                        >
+                            🔗
+                        </a>
+                    )}
+                </h4>
+            </div>
+
+            {/* ---------- DESCRIPTION ---------- */}
             {description.map((text, index) => (
                 <p key={index}>{text}</p>
             ))}
 
-            <p>
-                <strong>Key Focus Areas:</strong> {focus}
-            </p>
+            {focus && (
+                <p>
+                    <strong>Key Focus Areas:</strong> {focus}
+                </p>
+            )}
 
-            <p>
-                <strong>Tech:</strong> {tech}
-            </p>
+            {tech && (
+                <p>
+                    <strong>Tech:</strong> {tech}
+                </p>
+            )}
 
-            {/* ACTION PILLS */}
+            {/* ---------- ACTION BUTTONS ---------- */}
             <div className="project-actions">
                 {architecture && (
                     <button
@@ -112,7 +149,7 @@ export default function ProjectCard({
                 )}
             </div>
 
-            {/* PANELS */}
+            {/* ---------- PANELS ---------- */}
             <AnimatePresence>
                 {activePanel === "architecture" && (
                     <motion.div

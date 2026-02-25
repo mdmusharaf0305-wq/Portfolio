@@ -19,7 +19,7 @@ export default function Navbar() {
                     <a href="#experience">Experience</a>
                     <a href="#projects">Projects</a>
                     <a
-                        href="/Mohammed_Backend_Developer_Node_AWS.pdf"
+                        href="/Musharaf_Software_dev_Resume.pdf"
                         download
                         className="resume-link"
                     >
@@ -47,7 +47,7 @@ export default function Navbar() {
                     <a href="#experience" onClick={() => setOpen(false)}>Experience</a>
                     <a href="#projects" onClick={() => setOpen(false)}>Projects</a>
                     <a
-                        href="/Mohammed_Backend_Developer_Node_AWS.pdf"
+                        href="/Musharaf_Software_dev_Resume.pdf"
                         download
                         onClick={() => setOpen(false)}
                     >
