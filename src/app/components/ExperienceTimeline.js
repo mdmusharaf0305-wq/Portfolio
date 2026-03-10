@@ -8,11 +8,11 @@ export default function ExperienceTimeline() {
         company="Xine Technology Solutions"
         duration="Jan 2025 – Present"
         points={[
-          "Developed backend microservices using Node.js, Express, and AWS Lambda",
-          "Designed and deployed 10+ production-ready REST APIs",
-          "Improved API performance by 25% through database query optimization and caching",
-          "Implemented IAM policies, KMS encryption, and API Gateway routing",
-          "Reduced debugging time by 40% using CloudWatch Logs and structured logging",
+          "Worked in a hybrid role as a Data Analyst and Backend Developer, analyzing datasets to generate insights and building interactive dashboards and reports for data-driven decision-making.",
+
+          "Developed backend services and REST APIs using Node.js and Express, enabling applications and analytics tools to efficiently access and process data. Collaborated on integrating data pipelines, backend services, and visualization tools to create complete data-driven solutions.",
+        
+          "Also managed AWS deployment and cloud integration, implementing secure access controls and monitoring systems to ensure reliable and scalable applications."
         ]}
       />
 
@@ -21,10 +21,9 @@ export default function ExperienceTimeline() {
         company="Mphasis"
         duration="Sep 2024 – Dec 2024"
         points={[
-          "Built ETL workflows using Talend and MySQL for data processing pipelines",
-          "Reduced SQL pipeline execution time by 35% through query optimization",
-          "Created Power BI dashboards to visualize KPIs and business metrics",
-          "Containerized ETL processes using Docker for consistency across environments",
+          "Worked as a Data Analyst, building and maintaining data processing pipelines to transform raw data into meaningful insights. Developed ETL workflows using Talend, MySQL, and Snowflake to clean, process, and prepare data for analysis.",
+
+          "Optimized SQL queries to improve pipeline performance and efficiency. Built interactive Power BI dashboards to visualize KPIs and business metrics, enabling stakeholders to monitor performance and support data-driven decision-making."
         ]}
       />
     </section>

@@ -28,10 +28,10 @@ export default function Home() {
         {/* ===================== */}
         <Section title="Projects" id="projects">
           <ProjectCard
-          company={{
-            name: "Xine Technology Solutions Pvt Ltd",
-            logo: "logos/xine.png",
-          }}
+            company={{
+              name: "Xine Technology Solutions Pvt Ltd",
+              logo: "logos/xine.png",
+            }}
             title="Serverless Case & Workflow Platform"
             description={[
               "Designed and built a backend-first platform to model how real-world operational or legal requests flow through a system — from intake to resolution.",
@@ -61,10 +61,42 @@ export default function Home() {
             note="Public repository and architecture notes coming soon"
           />
           <ProjectCard
-          company={{
-            name: "Xine Technology Solutions Pvt Ltd",
-            logo: "logos/xine.png",
-          }}
+            company={{
+              name: "Xine Technology Solutions Pvt Ltd",
+              logo: "logos/xine.png",
+            }}
+            title="Inventory & Customer Analytics Reporting Platform"
+            description={[
+              "Extended the inventory management system by processing registered user and purchase transaction data stored in DynamoDB to generate structured analytical datasets.",
+              "Developed Power BI dashboards tracking inventory levels, customer counts, recurring customers, and purchasing behavior to support data-driven decisions."
+            ]}
+            focus="Inventory analytics, customer behavior analysis, ETL pipelines, business intelligence reporting"
+            tech="Talend, DynamoDB, SQL, Power BI"
+            architecture={[
+              "Inventory management system stores registered users and purchase transactions in DynamoDB",
+              "Talend ETL pipelines extract, clean, and transform operational datasets",
+              "Structured analytical datasets prepared for reporting and visualization",
+              "Power BI dashboards connect to processed datasets to visualize KPIs such as inventory levels and purchasing behavior",
+              "Business teams analyze dashboards to monitor demand trends and customer activity"
+            ]}
+            architectureImage="/architecture/inventory-customer-analytics.png"
+            decisions={[
+              "Used Talend ETL pipelines to transform DynamoDB operational data into structured analytical datasets.",
+              "Designed dashboards focusing on key business metrics including inventory levels, customer counts, and purchasing patterns.",
+              "Optimized data transformation workflows to support efficient dashboard refresh cycles.",
+              "Structured reporting to provide clear visibility into demand trends and customer behavior."
+            ]}
+            tradeoffs={[
+              "Analytics insights depend on ETL pipeline refresh schedules.",
+              "Operational DynamoDB data required transformation before being suitable for analytical reporting."
+            ]}
+            note="Analytics extension built on top of the production inventory management system to provide inventory monitoring and customer purchasing insights."
+          />
+          <ProjectCard
+            company={{
+              name: "Xine Technology Solutions Pvt Ltd",
+              logo: "logos/xine.png",
+            }}
             title="AI Chatbot Platform (Amazon Bedrock)"
             description={[
               "Designed and deployed a production-grade conversational platform powered by Amazon Bedrock with structured prompt engineering and agent-driven workflows.",
@@ -97,10 +129,10 @@ export default function Home() {
           />
 
           <ProjectCard
-           company={{
-            name: "Mphasis Pvt Ltd",
-            logo: "logos/mphasis.png",
-          }}
+            company={{
+              name: "Mphasis Pvt Ltd",
+              logo: "logos/mphasis.png",
+            }}
             title="Customer Analytics Data Pipeline"
             description={[
               "Designed and implemented an end-to-end data engineering pipeline to process and analyze large-scale customer datasets.",
@@ -128,6 +160,39 @@ export default function Home() {
               "Relational database choice may limit scalability for extremely large datasets compared to NoSQL alternatives.",
             ]}
             note="Sample workflows and documentation coming soon"
+          />
+          <ProjectCard
+            company={{
+              name: "Mphasis Pvt Ltd",
+              logo: "logos/mphasis.png",
+            }}
+            title="Product Inventory Analytics & Reporting Dashboard"
+            description={[
+              "Processed product inventory datasets to generate structured analytical data for reporting and visualization.",
+              "Built Power BI dashboards to track product inventory levels."
+            ]}
+            focus="Inventory analytics, ETL workflows, demand analysis, business intelligence reporting"
+            tech="Talend, MySQL, Snowflake, SQL, Power BI"
+            architecture={[
+              "Raw product inventory data collected from operational databases",
+              "Talend ETL workflows extract, clean, and transform inventory datasets",
+              "Structured data stored and optimized within Snowflake",
+              "SQL queries aggregate product inventory metrics",
+              "Power BI dashboards connect to processed datasets for inventory visualization",
+              "Business users monitor inventory levels and demand trends through dashboards"
+            ]}
+            architectureImage="/architecture/product-inventory-analytics.png"
+            decisions={[
+              "Designed ETL pipelines using Talend to ensure reliable transformation of product inventory data.",
+              "Optimized SQL queries to improve performance of inventory data pipelines.",
+              "Structured datasets to support efficient Power BI reporting and faster dashboard refresh cycles.",
+              "Focused dashboard design on key inventory KPIs such as stock levels, demand trends, and customer purchasing patterns."
+            ]}
+            tradeoffs={[
+              "Inventory insights depend on the frequency of ETL pipeline refresh cycles.",
+              "Accurate inventory analytics required careful validation during data transformation stages."
+            ]}
+            note="Analytics solution enabling product inventory monitoring, demand trend analysis, and data-driven inventory management decisions."
           />
         </Section>
         {/* ===================== */}
@@ -165,6 +230,65 @@ export default function Home() {
             ]}
             note="Live production deployment on Vercel with ongoing enhancements to analytics and forecasting."
           />
+        </Section>
+        {/* ===================== */}
+        {/* CERTIFICATIONS */}
+        {/* ===================== */}
+        <Section title="Certifications" id="certifications">
+          <div
+            style={{
+              maxWidth: "750px",
+              margin: "0 auto",
+              background: "#ffffff",
+              borderRadius: "12px",
+              boxShadow: "0 8px 24px rgba(0,0,0,0.08)",
+              padding: "24px",
+              textAlign: "center",
+              border: "1px solid #e5e7eb"
+            }}
+          >
+            <h3
+              style={{
+                fontSize: "20px",
+                fontWeight: "600",
+                marginBottom: "12px",
+                color: "#111827"
+              }}
+            >
+              Data Visualization Certificate
+            </h3>
+
+            <p
+              style={{
+                fontSize: "14px",
+                color: "#6b7280",
+                marginBottom: "20px",
+                lineHeight: "1.6"
+              }}
+            >
+              Certification focused on data visualization techniques, dashboard design,
+              and transforming datasets into clear visual insights for business
+              decision-making.
+            </p>
+
+            <div
+              style={{
+                borderRadius: "10px",
+                overflow: "hidden",
+                border: "1px solid #e5e7eb"
+              }}
+            >
+              <img
+                src="/Data Visualization Cetitificate.png"
+                alt="Data Visualization Certificate"
+                style={{
+                  width: "100%",
+                  height: "auto",
+                  display: "block"
+                }}
+              />
+            </div>
+          </div>
         </Section>
       </main>
 

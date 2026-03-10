@@ -13,8 +13,6 @@ const SKILLS = [
       "Express.js",
       "REST APIs",
       "JWT Auth",
-      "Async/Await",
-      "Error Handling",
     ],
   },
   {
@@ -24,10 +22,8 @@ const SKILLS = [
     dense: true,
     items: [
       "MySQL",
-      "Indexing",
       "MongoDB",
       "DynamoDB",
-      "Query Optimization",
     ],
   },
   {
@@ -50,21 +46,10 @@ const SKILLS = [
     icon: "🖥️",
     items: [
       "Next.js",
-      "React",
-      "Responsive UI",
-    ],
-  },
-  {
-    key: "data-eng",
-    title: "Data Engineering",
-    icon: "📊",
-    dense: true,
-    items: [
-      "Python",
-      "Talend",
-      "ETL Pipelines",
-      "Data Modeling",
-      "Batch Processing",
+      "React.js",
+      "HTML",
+      "CSS",
+      "JavaScript",
     ],
   },
   {
@@ -72,10 +57,22 @@ const SKILLS = [
     title: "BI & Analytics",
     icon: "📈",
     items: [
+      "Python",
       "Power BI",
+      "Talend",
+      "Snowflake",
       "Dashboards",
       "KPI Reporting",
-      "Data Analysis",
+    ],
+  },
+  {
+    key: "version-control",
+    title: "Version Control",
+    icon: "🛠️",
+    dense: true,
+    items: [
+      "Git",
+      "Bitbucket",
     ],
   },
   {
@@ -84,12 +81,10 @@ const SKILLS = [
     icon: "🛠️",
     dense: true,
     items: [
-      "Git",
       "Docker",
       "CI/CD",
       "Postman",
-      "Logging",
-      "Microservices",
+      "Insomnia",
     ],
   },
 ];

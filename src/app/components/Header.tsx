@@ -19,7 +19,7 @@ export default function Header() {
                 animate={{ opacity: 1 }}
                 transition={{ delay: 0.4 }}
             >
-                Software Developer with ~2 years of experience building cloud-native applications, scalable APIs, and data-driven systems. Experienced in developing full-stack features, serverless architectures, and analytics-ready data pipelines. Focused on writing clean, maintainable code, designing reliable systems, and delivering production-grade solutions with real-world impact.
+                Data Analyst and Software Developer with ~2 years of experience building data-driven applications and analytics solutions. Skilled in analyzing datasets, developing interactive dashboards, and designing scalable APIs and backend services. Experienced in developing cloud-based systems, building ETL pipelines, and transforming operational data into meaningful business insights.
             </motion.p>
         </header>
     );
