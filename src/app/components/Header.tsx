@@ -67,13 +67,26 @@ export default function Header() {
     const [visits, setVisits] = useState(0);
 
     useEffect(() => {
-        if (typeof window !== "undefined") {
-            const savedVisits = localStorage.getItem("portfolio_profile_visits");
-            let currentVisits = savedVisits ? parseInt(savedVisits, 10) : 1247;
-            currentVisits += 1;
-            localStorage.setItem("portfolio_profile_visits", currentVisits.toString());
-            setVisits(currentVisits);
-        }
+        const fetchVisits = async () => {
+            try {
+                const response = await fetch("https://api.counterapi.dev/v1/musharraf-portfolio/visits/up");
+                const data = await response.json();
+                // CounterAPI V1 returns { count: number }
+                if (data && typeof data.count === "number") {
+                    setVisits(data.count);
+                } else {
+                    throw new Error("Invalid response format");
+                }
+            } catch (error) {
+                // Fallback to local increments if API is offline or has CORS issues
+                const savedVisits = localStorage.getItem("portfolio_profile_visits");
+                let currentVisits = savedVisits ? parseInt(savedVisits, 10) : 1247;
+                currentVisits += 1;
+                localStorage.setItem("portfolio_profile_visits", currentVisits.toString());
+                setVisits(currentVisits);
+            }
+        };
+        fetchVisits();
     }, []);
 
     // Role Typewriter States

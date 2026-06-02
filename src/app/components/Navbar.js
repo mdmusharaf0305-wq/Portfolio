@@ -86,6 +86,13 @@ export default function Navbar() {
                     Resume
                 </a>
 
+                <a 
+                    href="mailto:musharaff.dev@gmail.com" 
+                    className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-all duration-200"
+                >
+                    Mail
+                </a>
+
                 <a href="#contact" className="px-3.5 py-1.5 rounded-full text-xs font-semibold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-all duration-200">
                     Contact
                 </a>
@@ -189,6 +196,14 @@ export default function Navbar() {
                         className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors"
                     >
                         Resume
+                    </a>
+
+                    <a
+                        href="mailto:musharaff.dev@gmail.com"
+                        onClick={() => setOpen(false)}
+                        className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors"
+                    >
+                        Mail
                     </a>
 
                     <a 

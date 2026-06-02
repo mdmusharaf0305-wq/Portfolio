@@ -24,9 +24,6 @@ export default function ContactForm() {
         setErrors(tempErrors);
         return Object.keys(tempErrors).length === 0;
     };
-    // Reads the Web3Forms Access Key from your environment variables (.env.local)
-    const ACCESS_KEY = process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY;
-
     const handleSubmit = async (e) => {
         e.preventDefault();
         if (!validate()) return;
@@ -41,7 +38,7 @@ export default function ContactForm() {
                     "Accept": "application/json"
                 },
                 body: JSON.stringify({
-                    access_key: ACCESS_KEY,
+                    access_key: process.env.NEXT_PUBLIC_WEB3FORMS_ACCESS_KEY,
                     name: name,
                     email: email,
                     message: message,
