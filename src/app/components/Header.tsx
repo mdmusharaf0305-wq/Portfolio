@@ -319,7 +319,7 @@ export default function Header() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.4, duration: 0.6 }}
-                    className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-16 w-full relative z-10"
+                    className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16 w-full relative z-10"
                 >
                     <div className="bg-theme-card border border-theme-border rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:scale-102 flex flex-col justify-center min-h-[110px]">
                         <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-brand-start via-brand-mid to-brand-end bg-clip-text text-transparent">
@@ -345,15 +345,6 @@ export default function Header() {
                         </div>
                         <div className="text-xs font-semibold text-theme-text-body mt-2 leading-tight">
                             Profile Visits
-                        </div>
-                    </div>
-
-                    <div className="bg-theme-card border border-theme-border rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:scale-102 flex flex-col justify-center min-h-[110px]">
-                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-brand-start via-brand-mid to-brand-end bg-clip-text text-transparent">
-                            <CountUp end={99.9} decimals={1} suffix="%" />
-                        </div>
-                        <div className="text-xs font-semibold text-theme-text-body mt-2 leading-tight">
-                            Target API Uptime
                         </div>
                     </div>
 
