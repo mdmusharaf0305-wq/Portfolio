@@ -112,7 +112,7 @@ export default function ContactForm() {
                         
                         <button
                             onClick={() => setStatus("idle")}
-                            className="px-5 py-2.5 text-xs font-semibold text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 rounded-full cursor-pointer transition-all duration-300 hover:scale-102 shadow-md shadow-indigo-600/10"
+                            className="px-5 py-2.5 text-xs font-semibold text-white bg-brand-start hover:bg-brand-start/90 rounded-full cursor-pointer transition-all duration-300 hover:scale-102 shadow-md shadow-brand-start/10"
                         >
                             Send Another Message
                         </button>
@@ -201,7 +201,7 @@ export default function ContactForm() {
                         <button
                             type="submit"
                             disabled={status === "sending"}
-                            className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md shadow-blue-600/10 flex items-center justify-center gap-2.5 cursor-pointer hover:scale-101 active:scale-99 disabled:opacity-60 disabled:cursor-not-allowed text-sm"
+                            className="w-full bg-gradient-to-r from-brand-start via-brand-mid to-brand-end text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md shadow-brand-start/15 hover:shadow-brand-start/25 hover:opacity-95 flex items-center justify-center gap-2.5 cursor-pointer hover:scale-101 active:scale-99 disabled:opacity-60 disabled:cursor-not-allowed text-sm"
                         >
                             {status === "sending" ? (
                                 <>

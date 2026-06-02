@@ -10,7 +10,7 @@ export default function ExperienceTimeline() {
         
         {/* Job 1 */}
         <div className="flex flex-col items-center group shrink-0 w-[260px] md:w-auto">
-          <div className="w-3.5 h-3.5 rounded-full bg-theme-bg border-2 border-blue-600 group-hover:border-cyan-500 group-hover:scale-125 transition-all duration-300 mb-5 hidden md:block z-10 shadow-sm" />
+          <div className="w-3.5 h-3.5 rounded-full bg-theme-bg border-2 border-brand-start group-hover:border-brand-end group-hover:scale-125 transition-all duration-300 mb-5 hidden md:block z-10 shadow-sm" />
           <ExperienceCard
             role="Senior Software Engineer"
             company="Xine Technologies"
@@ -20,7 +20,7 @@ export default function ExperienceTimeline() {
 
         {/* Job 2 */}
         <div className="flex flex-col items-center group shrink-0 w-[260px] md:w-auto">
-          <div className="w-3.5 h-3.5 rounded-full bg-theme-bg border-2 border-blue-600 group-hover:border-cyan-500 group-hover:scale-125 transition-all duration-300 mb-5 hidden md:block z-10 shadow-sm" />
+          <div className="w-3.5 h-3.5 rounded-full bg-theme-bg border-2 border-brand-start group-hover:border-brand-end group-hover:scale-125 transition-all duration-300 mb-5 hidden md:block z-10 shadow-sm" />
           <ExperienceCard
             role="Software Engineer"
             company="Mphasis, Pune"
@@ -30,7 +30,7 @@ export default function ExperienceTimeline() {
 
         {/* Job 3 */}
         <div className="flex flex-col items-center group shrink-0 w-[260px] md:w-auto">
-          <div className="w-3.5 h-3.5 rounded-full bg-theme-bg border-2 border-blue-600 group-hover:border-cyan-500 group-hover:scale-125 transition-all duration-300 mb-5 hidden md:block z-10 shadow-sm" />
+          <div className="w-3.5 h-3.5 rounded-full bg-theme-bg border-2 border-brand-start group-hover:border-brand-end group-hover:scale-125 transition-all duration-300 mb-5 hidden md:block z-10 shadow-sm" />
           <ExperienceCard
             role="Software Associate"
             company="Mphasis (Ants IT)"

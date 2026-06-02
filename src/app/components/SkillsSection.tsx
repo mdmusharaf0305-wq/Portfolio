@@ -92,7 +92,7 @@ export default function SkillsSection() {
             <div className="relative w-full h-full transform-style-3d duration-500 group-hover:rotate-y-180">
               
               {/* FRONT FACE */}
-              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-2xl border border-theme-border bg-theme-card backdrop-blur-md backface-hidden group-hover:border-indigo-400 group-hover:ring-4 group-hover:ring-indigo-500/10 group-hover:shadow-lg group-hover:shadow-indigo-500/5 transition-all duration-300">
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-2xl border border-theme-border bg-theme-card backdrop-blur-md backface-hidden group-hover:border-brand-mid group-hover:ring-4 group-hover:ring-brand-mid/10 group-hover:shadow-lg group-hover:shadow-brand-mid/5 transition-all duration-300">
                 <span className="text-3xl leading-none">{skill.icon}</span>
                 <span className="text-sm md:text-base font-bold text-theme-text-title text-center px-2">
                   {skill.title}
@@ -105,7 +105,7 @@ export default function SkillsSection() {
                   {skill.items.map((item, i) => (
                     <span
                       key={i}
-                      className="text-[10px] md:text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50/70 text-blue-700 border border-blue-100/50 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-900/40 shadow-sm"
+                      className="text-[10px] md:text-xs font-semibold px-2.5 py-1 rounded-full bg-brand-start/5 text-brand-start border border-brand-start/10 dark:bg-brand-end/5 dark:text-brand-end dark:border-brand-end/10 shadow-sm"
                     >
                       {item}
                     </span>

@@ -11,6 +11,10 @@
   --color-theme-card-hover: var(--card-hover-bg);
   --color-theme-timeline: var(--timeline-line);
   
+  --color-brand-start: var(--brand-start);
+  --color-brand-mid: var(--brand-mid);
+  --color-brand-end: var(--brand-end);
+  
   --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
 }
 
@@ -28,6 +32,10 @@
   --timeline-line: #b0c4de;
   --scrollbar-track: #f3f6fa;
   --scrollbar-thumb: #cbd5e1;
+  
+  --brand-start: #1d4ed8; /* Premium corporate dark-medium blue */
+  --brand-mid: #2563eb; /* Trustworthy royal/cobalt blue */
+  --brand-end: #0ea5e9; /* Modern innovative sky blue */
 }
 
 .dark {
@@ -40,6 +48,10 @@
   --timeline-line: #1e293b;
   --scrollbar-track: #030712;
   --scrollbar-thumb: #1e293b;
+
+  --brand-start: #3b82f6; /* Crisp light-medium blue */
+  --brand-mid: #60a5fa; /* Soft medium true blue */
+  --brand-end: #38bdf8; /* Vibrant light cyan/sky blue */
 }
 
 /* ===================================================== */
@@ -111,14 +123,14 @@ body, nav, footer, section, div, h1, h2, h3, h4, h5, p, span, a, button, li, inp
 /* Radial ambient backdrop glows */
 .bg-glow-mesh {
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.05) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.04) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, rgba(37, 99, 235, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(14, 165, 233, 0.04) 0%, transparent 40%);
 }
 
 .dark .bg-glow-mesh {
   background-image: 
-    radial-gradient(circle at 10% 20%, rgba(99, 102, 241, 0.15) 0%, transparent 40%),
-    radial-gradient(circle at 90% 80%, rgba(6, 182, 212, 0.12) 0%, transparent 40%);
+    radial-gradient(circle at 10% 20%, rgba(59, 130, 246, 0.12) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(56, 189, 248, 0.1) 0%, transparent 40%);
 }
 
 /* ===================================================== */

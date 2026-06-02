@@ -4,7 +4,7 @@ export default function Footer() {
       <div className="bg-theme-card border border-theme-border rounded-3xl p-6 md:p-8 shadow-sm relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6">
         
         {/* Soft Ambient Light Gradient inside Card */}
-        <div className="absolute bottom-0 right-0 w-[300px] h-[150px] bg-indigo-500/3 blur-[80px] rounded-full pointer-events-none" />
+        <div className="absolute bottom-0 right-0 w-[300px] h-[150px] bg-brand-mid/5 blur-[80px] rounded-full pointer-events-none" />
 
         {/* LEFT — BRAND DECK */}
         <div className="text-center sm:text-left relative z-10">

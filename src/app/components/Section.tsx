@@ -16,7 +16,7 @@ export default function Section({ id, title, children, className = "" }: Section
             {title && (
                 <div className="flex items-center mb-8">
                     {/* Visual marker bar */}
-                    <div className="w-1.5 h-6 rounded-full bg-gradient-to-b from-indigo-500 to-cyan-500 mr-4" />
+                    <div className="w-1.5 h-6 rounded-full bg-gradient-to-b from-brand-start to-brand-end mr-4" />
                     <h3 className="text-2xl md:text-3xl font-extrabold tracking-tight text-theme-text-title">
                         {title}
                     </h3>

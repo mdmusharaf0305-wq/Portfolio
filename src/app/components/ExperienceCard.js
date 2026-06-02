@@ -14,7 +14,7 @@ export default function ExperienceCard({ role, company, duration }) {
       <h4 className="text-sm md:text-base font-extrabold text-theme-text-title tracking-tight leading-snug">
         {role}
       </h4>
-      <p className="text-xs font-bold text-blue-600 dark:text-cyan-400 mt-1.5">
+      <p className="text-xs font-bold text-brand-start dark:text-brand-end mt-1.5">
         {company}
       </p>
       <span className="text-[10px] font-bold text-theme-text-body bg-slate-100/50 dark:bg-slate-900/60 border border-theme-border px-2.5 py-0.5 rounded-full mt-2.5 shadow-sm">
