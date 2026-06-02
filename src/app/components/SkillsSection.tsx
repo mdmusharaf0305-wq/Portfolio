@@ -105,7 +105,7 @@ export default function SkillsSection() {
                   {skill.items.map((item, i) => (
                     <span
                       key={i}
-                      className="text-[10px] md:text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50/70 text-indigo-700 border border-indigo-100/50 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-900/40 shadow-sm"
+                      className="text-[10px] md:text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50/70 text-blue-700 border border-blue-100/50 dark:bg-blue-950/40 dark:text-blue-300 dark:border-blue-900/40 shadow-sm"
                     >
                       {item}
                     </span>

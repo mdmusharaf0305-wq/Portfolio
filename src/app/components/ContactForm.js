@@ -140,7 +140,7 @@ export default function ContactForm() {
                                 disabled={status === "sending"}
                                 placeholder="Your Name"
                                 className={`w-full bg-slate-50 dark:bg-slate-900/40 border ${
-                                    errors.name ? "border-red-500 focus:ring-red-500/20" : "border-theme-border focus:ring-indigo-500/20"
+                                    errors.name ? "border-red-500 focus:ring-red-500/20" : "border-theme-border focus:ring-blue-500/20"
                                 } text-theme-text-title placeholder:text-theme-text-body/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-3 transition-all`}
                             />
                             {errors.name && (
@@ -162,7 +162,7 @@ export default function ContactForm() {
                                 disabled={status === "sending"}
                                 placeholder="name@example.com"
                                 className={`w-full bg-slate-50 dark:bg-slate-900/40 border ${
-                                    errors.email ? "border-red-500 focus:ring-red-500/20" : "border-theme-border focus:ring-indigo-500/20"
+                                    errors.email ? "border-red-500 focus:ring-red-500/20" : "border-theme-border focus:ring-blue-500/20"
                                 } text-theme-text-title placeholder:text-theme-text-body/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-3 transition-all`}
                             />
                             {errors.email && (
@@ -184,7 +184,7 @@ export default function ContactForm() {
                                 rows="4"
                                 placeholder="Your Message..."
                                 className={`w-full bg-slate-50 dark:bg-slate-900/40 border ${
-                                    errors.message ? "border-red-500 focus:ring-red-500/20" : "border-theme-border focus:ring-indigo-500/20"
+                                    errors.message ? "border-red-500 focus:ring-red-500/20" : "border-theme-border focus:ring-blue-500/20"
                                 } text-theme-text-title placeholder:text-theme-text-body/40 rounded-xl px-4 py-3 text-sm focus:outline-none focus:ring-3 transition-all resize-none`}
                             />
                             {errors.message && (
@@ -201,7 +201,7 @@ export default function ContactForm() {
                         <button
                             type="submit"
                             disabled={status === "sending"}
-                            className="w-full bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md shadow-indigo-600/10 flex items-center justify-center gap-2.5 cursor-pointer hover:scale-101 active:scale-99 disabled:opacity-60 disabled:cursor-not-allowed text-sm"
+                            className="w-full bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 text-white font-semibold py-3 px-6 rounded-xl transition-all duration-300 shadow-md shadow-blue-600/10 flex items-center justify-center gap-2.5 cursor-pointer hover:scale-101 active:scale-99 disabled:opacity-60 disabled:cursor-not-allowed text-sm"
                         >
                             {status === "sending" ? (
                                 <>

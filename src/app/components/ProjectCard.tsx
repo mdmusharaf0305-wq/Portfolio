@@ -65,14 +65,14 @@ export default function ProjectCard({
                             href={liveUrl}
                             target="_blank"
                             rel="noopener noreferrer"
-                            className="text-indigo-600 dark:text-cyan-400 hover:text-cyan-600 transition-colors"
+                            className="text-blue-600 dark:text-cyan-400 hover:text-cyan-600 transition-colors"
                             aria-label={`View ${title} live`}
                         >
                             🔗
                         </a>
                     )}
                 </h4>
-                <div className="text-xs font-bold text-indigo-600 dark:text-cyan-400 bg-indigo-50/50 dark:bg-indigo-950/30 border border-indigo-100/50 dark:border-indigo-900/50 rounded-full px-3 py-1 self-start shadow-sm">
+                <div className="text-xs font-bold text-blue-600 dark:text-cyan-400 bg-blue-50/50 dark:bg-blue-950/30 border border-blue-100/50 dark:border-blue-900/50 rounded-full px-3 py-1 self-start shadow-sm">
                     {role}
                 </div>
             </div>
@@ -171,7 +171,7 @@ export default function ProjectCard({
                     {responsibilities.map((resp, idx) => (
                         <li key={idx} className="flex gap-3 items-start text-sm md:text-base text-theme-text-body leading-relaxed">
                             {/* Stylized Badge Checkbox Indicator */}
-                            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-indigo-500/10 dark:bg-indigo-950/40 border border-indigo-500/20 dark:border-indigo-900/40 text-indigo-600 dark:text-cyan-400 font-bold shrink-0 mt-0.5 text-[10px] select-none shadow-sm">
+                            <span className="inline-flex items-center justify-center w-5 h-5 rounded-full bg-blue-500/10 dark:bg-blue-950/40 border border-blue-500/20 dark:border-blue-900/40 text-blue-600 dark:text-cyan-400 font-bold shrink-0 mt-0.5 text-[10px] select-none shadow-sm">
                                 ✓
                             </span>
                             <p className="text-sm md:text-base text-theme-text-body">{resp}</p>

@@ -53,16 +53,17 @@ export default function Navbar() {
                 <svg className="w-6.5 h-6.5 mr-1 shrink-0 animate-[spin_8s_linear_infinite]" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <defs>
                         <linearGradient id="logoGrad" x1="0%" y1="100%" x2="100%" y2="0%">
-                            <stop offset="0%" stopColor="#4f46e5" />
+                            <stop offset="0%" stopColor="#2563eb" />
+                            <stop offset="50%" stopColor="#4f46e5" />
                             <stop offset="100%" stopColor="#0891b2" />
                         </linearGradient>
                     </defs>
                     <path d="M20 75 L38 30 L55 60 L75 25" stroke="url(#logoGrad)" strokeWidth="10" strokeLinecap="round" strokeLinejoin="round" />
                     <circle cx="75" cy="25" r="7" fill="#0891b2" />
-                    <circle cx="20" cy="75" r="6" fill="#4f46e5" />
+                    <circle cx="20" cy="75" r="6" fill="#2563eb" />
                 </svg>
                 
-                <span>Mohammed <span className="bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent font-bold">Musharraf</span></span>
+                <span>Mohammed <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent font-bold">Musharraf</span></span>
             </a>
 
             {/* Desktop Links */}

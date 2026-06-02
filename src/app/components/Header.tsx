@@ -218,7 +218,7 @@ export default function Header() {
     return (
         <header className="max-w-5xl mx-auto px-6 pt-24 pb-16 relative overflow-hidden">
             {/* Glowing Ambient Backdrop - Light Mode */}
-            <div className="absolute top-0 left-[-10%] w-[450px] h-[450px] bg-indigo-500/5 blur-[120px] rounded-full pointer-events-none" />
+            <div className="absolute top-0 left-[-10%] w-[450px] h-[450px] bg-blue-500/5 blur-[120px] rounded-full pointer-events-none" />
             <div className="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] bg-cyan-500/3 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="relative z-10 flex flex-col items-start">
@@ -275,11 +275,11 @@ export default function Header() {
                     Mohammed Musharraf
                     {/* Fixed Height Typing Container */}
                     <span className="block mt-3 h-[42px] md:h-[60px] overflow-hidden">
-                        <span className="bg-gradient-to-r from-indigo-600 via-indigo-500 to-cyan-600 dark:from-indigo-400 dark:via-indigo-300 dark:to-cyan-400 bg-clip-text text-transparent text-3xl md:text-5xl font-bold inline-block">
+                        <span className="bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent text-3xl md:text-5xl font-bold inline-block">
                             {currentRoleText}
                         </span>
                         {/* Blinking Typewriter Cursor */}
-                        <span className="inline-block w-[3px] h-7 md:h-10 bg-indigo-600 dark:bg-cyan-400 ml-1.5 align-middle animate-pulse" />
+                        <span className="inline-block w-[3px] h-7 md:h-10 bg-blue-600 dark:bg-cyan-400 ml-1.5 align-middle animate-pulse" />
                     </span>
                 </motion.h1>
 
@@ -302,7 +302,7 @@ export default function Header() {
                 >
                     <a
                         href="#projects"
-                        className="px-6 py-3 text-sm font-semibold text-white bg-indigo-600 hover:bg-indigo-700 dark:bg-indigo-500 dark:hover:bg-indigo-600 rounded-full shadow-lg shadow-indigo-600/10 hover:shadow-indigo-600/20 hover:scale-102 active:scale-98 transition-all duration-300 cursor-pointer"
+                        className="px-6 py-3 text-sm font-semibold text-white bg-blue-600 hover:bg-blue-700 dark:bg-blue-500 dark:hover:bg-blue-600 rounded-full shadow-lg shadow-blue-600/10 hover:shadow-blue-600/20 hover:scale-102 active:scale-98 transition-all duration-300 cursor-pointer"
                     >
                         View Projects
                     </a>
@@ -322,7 +322,7 @@ export default function Header() {
                     className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-4 mt-16 w-full relative z-10"
                 >
                     <div className="bg-theme-card border border-theme-border rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:scale-102 flex flex-col justify-center min-h-[110px]">
-                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
+                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
                             <CountUp end={4} suffix="+" />
                         </div>
                         <div className="text-xs font-semibold text-theme-text-body mt-2 leading-tight">
@@ -331,7 +331,7 @@ export default function Header() {
                     </div>
 
                     <div className="bg-theme-card border border-theme-border rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:scale-102 flex flex-col justify-center min-h-[110px]">
-                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
+                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
                             <CountUp end={2} />
                         </div>
                         <div className="text-xs font-semibold text-theme-text-body mt-2 leading-tight">
@@ -340,7 +340,7 @@ export default function Header() {
                     </div>
 
                     <div className="bg-theme-card border border-theme-border rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:scale-102 flex flex-col justify-center min-h-[110px]">
-                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
+                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
                             {visits > 0 ? <CountUp end={visits} /> : <span>1248</span>}
                         </div>
                         <div className="text-xs font-semibold text-theme-text-body mt-2 leading-tight">
@@ -349,7 +349,7 @@ export default function Header() {
                     </div>
 
                     <div className="bg-theme-card border border-theme-border rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:scale-102 flex flex-col justify-center min-h-[110px]">
-                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
+                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
                             <CountUp end={99.9} decimals={1} suffix="%" />
                         </div>
                         <div className="text-xs font-semibold text-theme-text-body mt-2 leading-tight">
@@ -358,7 +358,7 @@ export default function Header() {
                     </div>
 
                     <div className="bg-theme-card border border-theme-border rounded-2xl p-5 text-center shadow-sm hover:shadow-md transition-all duration-300 hover:scale-102 flex flex-col justify-center min-h-[110px]">
-                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-indigo-600 to-cyan-600 dark:from-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
+                        <div className="text-2xl md:text-3xl font-extrabold bg-gradient-to-r from-blue-600 via-indigo-600 to-cyan-500 dark:from-blue-400 dark:via-indigo-400 dark:to-cyan-400 bg-clip-text text-transparent">
                             <CountUp end={10} suffix="+" />
                         </div>
                         <div className="text-xs font-semibold text-theme-text-body mt-2 leading-tight">

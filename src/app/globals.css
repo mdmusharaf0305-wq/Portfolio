@@ -19,14 +19,14 @@
 /* ===================================================== */
 
 :root {
-  --bg-main: #f8fafc; /* Soft slate/zinc background */
-  --text-title: #0f172a; /* Slate-900 text */
-  --text-body: #475569; /* Slate-700 body */
-  --border-line: rgba(226, 232, 240, 0.8);
-  --card-bg: rgba(255, 255, 255, 0.65);
-  --card-hover-bg: rgba(255, 255, 255, 0.85);
-  --timeline-line: #cbd5e1;
-  --scrollbar-track: #f1f5f9;
+  --bg-main: #f3f6fa; /* Soft premium blue-tinted zinc background */
+  --text-title: #0b132b; /* Sophisticated deep navy blue title */
+  --text-body: #334e68; /* Calm Slate Blue body text */
+  --border-line: rgba(209, 220, 235, 0.7); /* Soft sky-blue border tint */
+  --card-bg: rgba(255, 255, 255, 0.72); /* Milky white glass card */
+  --card-hover-bg: rgba(255, 255, 255, 0.88);
+  --timeline-line: #b0c4de;
+  --scrollbar-track: #f3f6fa;
   --scrollbar-thumb: #cbd5e1;
 }
 
