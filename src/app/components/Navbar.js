@@ -43,9 +43,11 @@ export default function Navbar() {
 
     return (
         <nav className={`fixed top-4 left-1/2 -translate-x-1/2 w-[92%] max-w-4xl z-50 rounded-full border shadow-md h-14 flex items-center justify-between px-6 transition-all duration-300 ${
-            scrolled 
-                ? "bg-slate-50/95 dark:bg-slate-950/95 border-slate-200/80 dark:border-slate-800/80 backdrop-blur-xl shadow-lg"
-                : "bg-theme-card/75 border-theme-border backdrop-blur-md"
+            open
+                ? "bg-white dark:bg-slate-950 border-theme-border shadow-lg"
+                : scrolled 
+                    ? "bg-slate-50/95 dark:bg-slate-950/95 border-slate-200/80 dark:border-slate-800/80 backdrop-blur-xl shadow-lg"
+                    : "bg-theme-card/75 border-theme-border backdrop-blur-md"
         }`}>
             {/* Logo & Name Group */}
             <a href="#" className="flex items-center gap-1 font-semibold text-sm md:text-base tracking-tight text-theme-text-title hover:opacity-90 transition-opacity shrink-0">
@@ -166,7 +168,7 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="absolute top-[60px] left-0 right-0 bg-slate-50 dark:bg-slate-950 border border-theme-border rounded-2xl p-4 flex flex-col gap-1.5 transition-all duration-300 shadow-lg shadow-slate-200/20 dark:shadow-none z-50">
+                <div className="absolute top-[52px] left-0 right-0 bg-white dark:bg-slate-950 border border-theme-border rounded-2xl p-4 flex flex-col gap-1.5 transition-all duration-300 shadow-lg shadow-slate-200/20 dark:shadow-none z-50">
                     <a 
                         href="#skills" 
                         onClick={() => setOpen(false)}
