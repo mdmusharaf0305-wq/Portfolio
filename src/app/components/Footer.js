@@ -1,78 +1,71 @@
 export default function Footer() {
-    return (
-      <footer id="contact">
-        <div className="footer-inner container">
-          {/* LEFT — MESSAGE */}
-          <div className="footer-meta">
-            <p className="footer-heading">
-              Want to collaborate or discuss an opportunity?
-            </p>
-  
-            <p className="footer-description">
-              I’m always open to meaningful engineering conversations, backend
-              challenges, and product-focused problem solving.
-            </p>
-  
-            <p className="footer-copy">
-              © {new Date().getFullYear()} Mohammed Musharraf
-            </p>
-          </div>
-  
-          {/* RIGHT — ICON LINKS */}
-          <div className="footer-links footer-icons">
-  <a href="mailto:md.musharaf0305@gmail.com" aria-label="Email" title="Email">
-    <img
-      src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg"
-      alt=""
-      className="icon-gmail"
-    />
-  </a>
+  return (
+    <footer className="max-w-5xl mx-auto px-6 mb-12">
+      <div className="bg-theme-card border border-theme-border rounded-3xl p-6 md:p-8 shadow-sm relative overflow-hidden flex flex-col sm:flex-row items-center justify-between gap-6">
+        
+        {/* Soft Ambient Light Gradient inside Card */}
+        <div className="absolute bottom-0 right-0 w-[300px] h-[150px] bg-indigo-500/3 blur-[80px] rounded-full pointer-events-none" />
 
-  <a
-    href="https://www.linkedin.com/in/mohammed-musharraf-374940212"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="LinkedIn"
-    title="LinkedIn"
-  >
-    <img
-      src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
-      alt=""
-      className="icon-linkedin"
-    />
-  </a>
-
-  <a
-    href="https://github.com/mdmusharaf0305-wq"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="GitHub"
-    title="GitHub"
-  >
-    <img
-      src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
-      alt=""
-      className="icon-github"
-    />
-  </a>
-
-  <a
-    href="https://www.naukri.com/mnjuser/profile"
-    target="_blank"
-    rel="noopener noreferrer"
-    aria-label="Naukri"
-    title="Naukri"
-  >
-    <img
-      src="https://static.naukimg.com/s/4/100/i/naukri_Logo.png"
-      alt=""
-      className="naukri-icon"
-    />
-  </a>
-</div>
-
+        {/* LEFT — BRAND DECK */}
+        <div className="text-center sm:text-left relative z-10">
+          <p className="text-sm font-semibold text-theme-text-title tracking-tight">
+            Mohammed Musharraf
+          </p>
+          <p className="text-xs text-theme-text-body mt-1">
+            © {new Date().getFullYear()} All rights reserved.
+          </p>
         </div>
-      </footer>
-    );
-  }
-  
+
+        {/* RIGHT — SOCIAL BUTTON ROW */}
+        <div className="flex items-center gap-3 flex-wrap justify-center relative z-10 footer-icons">
+          {/* Gmail */}
+          <a 
+            href="mailto:musharaff.dev@gmail.com" 
+            aria-label="Email" 
+            title="Email"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-900 border border-theme-border hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 group shadow-sm"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/gmail.svg"
+              alt=""
+              className="w-5 h-5 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 icon-gmail filter grayscale brightness-75 dark:invert"
+            />
+          </a>
+
+          {/* LinkedIn */}
+          <a
+            href="https://www.linkedin.com/in/musharraf-mohammed-374940212/"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="LinkedIn"
+            title="LinkedIn"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-900 border border-theme-border hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 group shadow-sm"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/linkedin.svg"
+              alt=""
+              className="w-5 h-5 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 icon-linkedin filter grayscale brightness-75 dark:invert"
+            />
+          </a>
+
+          {/* GitHub */}
+          <a
+            href="https://github.com/mdmusharaf0305-wq"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="GitHub"
+            title="GitHub"
+            className="inline-flex items-center justify-center w-10 h-10 rounded-xl bg-slate-50 dark:bg-slate-900 border border-theme-border hover:bg-slate-100 dark:hover:bg-slate-800 transition-all duration-300 group shadow-sm"
+          >
+            <img
+              src="https://cdn.jsdelivr.net/gh/simple-icons/simple-icons/icons/github.svg"
+              alt=""
+              className="w-5 h-5 opacity-60 group-hover:opacity-100 group-hover:scale-110 transition-all duration-300 icon-github filter grayscale brightness-75 dark:invert"
+            />
+          </a>
+        </div>
+
+      </div>
+    </footer>
+  );
+}

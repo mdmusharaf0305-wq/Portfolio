@@ -4,115 +4,109 @@ import Section from "./Section";
 
 const SKILLS = [
   {
+    key: "frontend",
+    title: "Frontend Core",
+    icon: "🖥️",
+    items: [
+      "React.js",
+      "Next.js",
+      "TypeScript",
+      "JavaScript (ES6+)",
+      "Redux Toolkit",
+      "Tailwind CSS",
+    ],
+  },
+  {
     key: "backend",
-    title: "Backend Engineering",
+    title: "Backend & Databases",
     icon: "🧠",
-    dense: true,
     items: [
       "Node.js",
       "Express.js",
       "REST APIs",
       "JWT Auth",
-    ],
-  },
-  {
-    key: "databases",
-    title: "Databases",
-    icon: "🗄️",
-    dense: true,
-    items: [
-      "MySQL",
       "MongoDB",
-      "DynamoDB",
+      "PostgreSQL",
     ],
   },
   {
-    key: "cloud",
-    title: "AWS & Serverless",
-    icon: "☁️",
-    dense: true,
+    key: "integration",
+    title: "API & Integration",
+    icon: "🔌",
     items: [
-      "IAM",
-      "KMS",
-      "S3",
-      "Lambda",
-      "API Gateway",
-      "CloudWatch",
+      "GraphQL",
+      "Apollo Client",
+      "Axios",
+      "Fetch API",
     ],
   },
   {
-    key: "frontend",
-    title: "Frontend",
-    icon: "🖥️",
+    key: "performance",
+    title: "Performance & Arch",
+    icon: "⚡",
     items: [
-      "Next.js",
-      "React.js",
-      "HTML",
-      "CSS",
-      "JavaScript",
+      "SSR, SSG, ISR",
+      "Code Splitting",
+      "Lazy Loading",
+      "Memoization",
+      "Responsive UI",
+      "Clean Architecture",
     ],
   },
   {
-    key: "bi",
-    title: "BI & Analytics",
-    icon: "📈",
+    key: "testing",
+    title: "Testing Frameworks",
+    icon: "🧪",
     items: [
-      "Python",
-      "Power BI",
-      "Talend",
-      "Snowflake",
-      "Dashboards",
-      "KPI Reporting",
-    ],
-  },
-  {
-    key: "version-control",
-    title: "Version Control",
-    icon: "🛠️",
-    dense: true,
-    items: [
-      "Git",
-      "Bitbucket",
+      "Jest",
+      "React Testing Library",
+      "Cypress",
+      "Mocha",
+      "Chai",
     ],
   },
   {
     key: "tools",
-    title: "Tools & Practices",
-    icon: "🛠️",
-    dense: true,
+    title: "Tools & Editors",
+    icon: "⚙️",
     items: [
-      "Docker",
-      "CI/CD",
-      "Postman",
-      "Insomnia",
+      "Webpack",
+      "Vite",
+      "Git & GitHub",
+      "VS Code",
+      "GitHub Copilot",
+      "Cursor AI",
     ],
   },
 ];
 
-
 export default function SkillsSection() {
   return (
-    <Section title="Skills" id="skills">
-      <div className="skills-section">
+    <Section title="Skills" id="skills" className="relative">
+      <div className="grid grid-cols-2 md:grid-cols-3 gap-6">
         {SKILLS.map((skill) => (
           <div
             key={skill.key}
-            className={`flip-card ${skill.dense ? "flip-card--dense" : ""}`}
+            className="perspective-1000 group cursor-pointer h-48 md:h-44"
           >
-
-            <div className="flip-card-inner">
-
-              {/* FRONT */}
-              <div className="flip-card-front">
-                <div className="skill-icon">{skill.icon}</div>
-                <div className="skill-title">{skill.title}</div>
+            <div className="relative w-full h-full transform-style-3d duration-500 group-hover:rotate-y-180">
+              
+              {/* FRONT FACE */}
+              <div className="absolute inset-0 flex flex-col items-center justify-center gap-3 rounded-2xl border border-theme-border bg-theme-card backdrop-blur-md backface-hidden group-hover:border-indigo-400 group-hover:ring-4 group-hover:ring-indigo-500/10 group-hover:shadow-lg group-hover:shadow-indigo-500/5 transition-all duration-300">
+                <span className="text-3xl leading-none">{skill.icon}</span>
+                <span className="text-sm md:text-base font-bold text-theme-text-title text-center px-2">
+                  {skill.title}
+                </span>
               </div>
 
-              {/* BACK */}
-              <div className="flip-card-back">
-                <div className="skill-pills">
+              {/* BACK FACE */}
+              <div className="absolute inset-0 flex items-center justify-center p-4 rounded-2xl border border-theme-border bg-theme-card backdrop-blur-md rotate-y-180 backface-hidden shadow-sm">
+                <div className="flex flex-wrap gap-1.5 justify-center">
                   {skill.items.map((item, i) => (
-                    <span key={i} className="skill-pill">
+                    <span
+                      key={i}
+                      className="text-[10px] md:text-xs font-semibold px-2.5 py-1 rounded-full bg-indigo-50/70 text-indigo-700 border border-indigo-100/50 dark:bg-indigo-950/40 dark:text-indigo-300 dark:border-indigo-900/40 shadow-sm"
+                    >
                       {item}
                     </span>
                   ))}
