@@ -166,25 +166,25 @@ export default function Navbar() {
 
             {/* Mobile Menu */}
             {open && (
-                <div className="absolute top-[60px] left-0 right-0 bg-theme-card border border-theme-border rounded-2xl p-4 flex flex-col gap-1.5 transition-all duration-300 shadow-lg shadow-slate-200/50 backdrop-blur-lg">
+                <div className="absolute top-[60px] left-0 right-0 bg-slate-50 dark:bg-slate-950 border border-theme-border rounded-2xl p-4 flex flex-col gap-1.5 transition-all duration-300 shadow-lg shadow-slate-200/20 dark:shadow-none z-50">
                     <a 
                         href="#skills" 
                         onClick={() => setOpen(false)}
-                        className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors"
+                        className="block px-4 py-2.5 rounded-lg text-sm font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/40 transition-colors"
                     >
                         Skills
                     </a>
                     <a 
                         href="#experience" 
                         onClick={() => setOpen(false)}
-                        className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors"
+                        className="block px-4 py-2.5 rounded-lg text-sm font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/40 transition-colors"
                     >
                         Experience
                     </a>
                     <a 
                         href="#projects" 
                         onClick={() => setOpen(false)}
-                        className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors"
+                        className="block px-4 py-2.5 rounded-lg text-sm font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/40 transition-colors"
                     >
                         Projects
                     </a>
@@ -194,7 +194,7 @@ export default function Navbar() {
                         href="/Mohammed%20Musharraf%20Resume.pdf"
                         download
                         onClick={() => setOpen(false)}
-                        className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors"
+                        className="block px-4 py-2.5 rounded-lg text-sm font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/40 transition-colors"
                     >
                         Resume
                     </a>
@@ -202,7 +202,7 @@ export default function Navbar() {
                     <a
                         href="mailto:musharaff.dev@gmail.com"
                         onClick={() => setOpen(false)}
-                        className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors"
+                        className="block px-4 py-2.5 rounded-lg text-sm font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/40 transition-colors"
                     >
                         Mail
                     </a>
@@ -210,7 +210,7 @@ export default function Navbar() {
                     <a 
                         href="#contact" 
                         onClick={() => setOpen(false)}
-                        className="block px-4 py-2 rounded-lg text-xs font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/60 transition-colors border-t border-theme-border mt-1 pt-2.5"
+                        className="block px-4 py-2.5 rounded-lg text-sm font-bold text-theme-text-body hover:text-theme-text-title hover:bg-slate-100 dark:hover:bg-slate-900/40 transition-colors border-t border-theme-border mt-1 pt-2.5"
                     >
                         Contact
                     </a>

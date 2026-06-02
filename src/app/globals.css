@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 @import "tailwindcss";
 
 @custom-variant dark (&:where(.dark, .dark *));
@@ -15,7 +16,8 @@
   --color-brand-mid: var(--brand-mid);
   --color-brand-end: var(--brand-end);
   
-  --font-sans: "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --font-sans: "Inter", system-ui, -apple-system, sans-serif;
+  --font-display: "Plus Jakarta Sans", var(--font-sans);
 }
 
 /* ===================================================== */
@@ -57,6 +59,10 @@
 /* ===================================================== */
 /* 🔧 GLOBAL BASE */
 /* ===================================================== */
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-display);
+}
 
 html {
   scroll-behavior: smooth;

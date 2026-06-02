@@ -270,16 +270,16 @@ export default function Header() {
                     initial={{ opacity: 0, y: 20 }}
                     animate={{ opacity: 1, y: 0 }}
                     transition={{ delay: 0.1, duration: 0.6 }}
-                    className="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-none text-theme-text-title max-w-4xl"
+                    className="text-3xl sm:text-4xl md:text-6xl font-extrabold tracking-tight leading-tight md:leading-none text-theme-text-title max-w-4xl"
                 >
                     Mohammed Musharraf
                     {/* Fixed Height Typing Container */}
-                    <span className="block mt-3 h-[42px] md:h-[60px] overflow-hidden">
-                        <span className="bg-gradient-to-r from-brand-start via-brand-mid to-brand-end bg-clip-text text-transparent text-3xl md:text-5xl font-bold inline-block">
+                    <span className="block mt-3 h-[32px] sm:h-[42px] md:h-[60px] overflow-hidden">
+                        <span className="bg-gradient-to-r from-brand-start via-brand-mid to-brand-end bg-clip-text text-transparent text-xl sm:text-3xl md:text-5xl font-bold inline-block">
                             {currentRoleText}
                         </span>
                         {/* Blinking Typewriter Cursor */}
-                        <span className="inline-block w-[3px] h-7 md:h-10 bg-brand-start ml-1.5 align-middle animate-pulse" />
+                        <span className="inline-block w-[3px] h-5 sm:h-7 md:h-10 bg-brand-start ml-1.5 align-middle animate-pulse" />
                     </span>
                 </motion.h1>
 
