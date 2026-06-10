@@ -26,13 +26,6 @@ export default function Home() {
         </Section>
 
         {/* ===================== */}
-        {/* EDUCATION */}
-        {/* ===================== */}
-        <Section title="Education" id="education">
-          <EducationTimeline />
-        </Section>
-
-        {/* ===================== */}
         {/* PROJECTS */}
         {/* ===================== */}
         <Section title="Projects" id="projects">
@@ -99,6 +92,15 @@ export default function Home() {
             ]}
           />
         </Section>
+
+        {/* ===================== */}
+        {/* EDUCATION */}
+        {/* ===================== */}
+        <Section title="Education" id="education">
+          <EducationTimeline />
+        </Section>
+
+
 
         {/* ===================== */}
         {/* CERTIFICATIONS */}

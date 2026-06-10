@@ -4,10 +4,11 @@ import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 
 const ROLES = [
-    "React Developer",
+    "React Js Developer",
     "Frontend Focused Full-Stack",
     "Next.js Developer",
-    "Product Engineer",
+    "Software Engineer",
+    "VibeCoder"
 ];
 
 const AVAILS = [
@@ -37,7 +38,7 @@ function CountUp({ end, duration = 1500, suffix = "", decimals = 0 }: CountUpPro
             if (!startTime) startTime = timestamp;
             const progress = timestamp - startTime;
             const percentage = Math.min(progress / duration, 1);
-            
+
             // Easing: easeOutQuad
             const easeProgress = percentage * (2 - percentage);
             const currentVal = easeProgress * end;
@@ -121,7 +122,7 @@ export default function Header() {
                     timer = setTimeout(() => setIsRoleDeleting(true), delayBeforeDelete);
                     return;
                 }
-                
+
                 timer = setTimeout(handleTyping, typeSpeed);
             } else {
                 setCurrentRoleText(fullText.substring(0, currentRoleText.length - 1));
@@ -222,18 +223,17 @@ export default function Header() {
             <div className="absolute bottom-[-10%] right-[-10%] w-[400px] h-[400px] bg-brand-end/3 dark:bg-brand-end/12 blur-[100px] rounded-full pointer-events-none" />
 
             <div className="relative z-10 flex flex-col items-start">
-                
+
                 {/* Two Side-by-Side Status Capsules */}
                 <div className="flex flex-wrap items-center gap-4 mb-6">
-                    
+
                     {/* Capsule 1: Availability & Immediate Joiner */}
                     <div className="h-9 flex items-center">
-                        <div 
-                            className={`inline-flex items-center px-4 py-1.5 text-xs font-semibold rounded-full border transition-all duration-300 shadow-sm ${
-                                availIndex === 1
+                        <div
+                            className={`inline-flex items-center px-4 py-1.5 text-xs font-semibold rounded-full border transition-all duration-300 shadow-sm ${availIndex === 1
                                     ? "border-red-500 bg-red-500/10 dark:bg-red-950/20 text-red-600 dark:text-red-400 shadow-lg shadow-red-500/20 animate-[pulse_1.5s_infinite] scale-102 font-bold"
                                     : "border-theme-border bg-theme-card text-theme-text-body"
-                            }`}
+                                }`}
                         >
                             {availIndex === 0 ? (
                                 <span className="relative flex h-2 w-2 mr-2">
@@ -244,9 +244,8 @@ export default function Header() {
                                 <span className="mr-1.5 animate-[pulse_1s_infinite] drop-shadow-[0_0_8px_rgba(239,68,68,0.8)]">⚡</span>
                             )}
                             <span>{currentAvailText}</span>
-                            <span className={`inline-block w-[1.5px] h-3 ml-1 align-middle animate-pulse ${
-                                availIndex === 1 ? "bg-red-500" : "bg-slate-500"
-                            }`} />
+                            <span className={`inline-block w-[1.5px] h-3 ml-1 align-middle animate-pulse ${availIndex === 1 ? "bg-red-500" : "bg-slate-500"
+                                }`} />
                         </div>
                     </div>
 
@@ -262,7 +261,7 @@ export default function Header() {
                             <span className="inline-block w-[1.5px] h-3 ml-1 bg-slate-500 align-middle animate-pulse" />
                         </div>
                     </div>
-                    
+
                 </div>
 
                 {/* Main Heading */}
